@@ -13,3 +13,4 @@
 #Highlights
 - When making serializers we also use 'class Meta' to referrence the model in question along with what properties of the model we want to convert into JSON to display
 - The generated Serializers are used in the view functions (views.py) before returning the response where by the model in question is converted to JSON using the serializer then returned in the response of the view function 
+- REGISTERING : When registering an app to the admin panel in the apps admin.py we register the Model we want to be seen
