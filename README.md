@@ -8,3 +8,8 @@
 - pip3 install djoser(HELP WITH AUTHENTICATION, ADDS MORE END POINTS TO THE API SO ITS EASIER TO LOGIN AND GET TOKEN FOR AUTHENTICATION)
 - pip3 install pillow(HELP TO RESIZE IMAGES )
 - pip3 install stripe (TO HANDLE PAYMENTS)
+
+
+#Highlights
+- When making serializers we also use 'class Meta' to referrence the model in question along with what properties of the model we want to convert into JSON to display
+- The generated Serializers are used in the view functions (views.py) before returning the response where by the model in question is converted to JSON using the serializer then returned in the response of the view function 
