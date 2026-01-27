@@ -34,7 +34,7 @@ class ProductDetail(APIView):
     #HAVING INHERITED FROM THE API VIEW WE ARE NOT GOING TO OVERIDE THE GET FUNCTION BUT INSTEAD OVERRIDE THE GET OBJECT FUNCTION AND PASS IN 
     def get_object(self, category_slug,product_slug):
         try:
-            return Product.objects.filter(category_slug = category_slug).get(slug=product_slug)
+            return Product.objects.filter(category__slug = category_slug).get(slug=product_slug)
         except Product.DoesNotExist:
             raise Http404
 
