@@ -17,3 +17,4 @@
 - ADDING Categories and Products Initially we add them through the admin panel after registering them.
 - NOTE : WHEN USING AXIOS IN THE FRONT END TO MAKE API CALLS WE ALSO NEED TO IMPORT IT IN THE main.js file and let vue know about
 -NOTE : YOU NEED TO RUN BOTH THE BACKEND DJANGO API SERVER  WITH THE FRONT END VUE 
+- WE SET UP Vuex/State management , we need this to make it visible to add things to the cart and authentication other things , we set it up in djackets_vue/store/index.js
