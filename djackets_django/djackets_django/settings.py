@@ -133,5 +133,5 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 #ADDED
-MEDIA_URL = '/media'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
