@@ -3,6 +3,29 @@ export default {
 data(){
   return {
     showMobileMenu: false,
+    cart: {
+      items:[]
+    }
+  }
+},
+// DEFAULT METHOD BELOW HELPS US INITIALIZE THE STORE BEFORE THE ABOVE IS CREATED
+beforeCreate(){
+  // BELOW WE ARE CALLING THE initializeStore function in the file handling the Vuex(state)(store/index.js) 
+  //Commit helps us call the actions we have in the Vuex(state)(store/index.js)
+  his.$store.commit('initializeStore')
+},
+mounted(){
+  this.cart = this.$store.state.cart
+},
+computed:{
+  cartTotalLength(){
+    let totalLength = 0
+
+    for (let i = 0; i < this.cart.items.length; i++){
+      totalLength += this.cart.items[i].quantity
+    }
+    
+    return totalLength
   }
 }
 }
@@ -39,7 +62,7 @@ data(){
 
             <router-link to="/cart" class="button is-success">
               <span class="icon"> <i class="fas fa-shopping-cart"></i></span>
-              <span>Cart</span>
+              <span>Cart ({{ cartTotalLength }})</span>
             </router-link>
 
           </div>
